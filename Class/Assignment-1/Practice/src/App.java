@@ -1,19 +1,22 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Jawa!");
+        AutoRifle M4A1 = new AutoRifle("M4A1", "United States", 30, "5.56x45mm", 700);
+        M4A1.inspect();
     }
 }
 
 abstract class Firearm {
 
     //Attributes
+    protected String name;
     protected String origins;
     protected int capacity;
     protected String calibre;
     protected int firerate;
 
     //Constructor
-    public Firearm(String origins, int capacity, String calibre, int firerate){
+    public Firearm(String name, String origins, int capacity, String calibre, int firerate){
+        this.name = name;
         this.origins = origins;
         this.capacity = capacity;
         this.calibre = calibre;
@@ -21,6 +24,9 @@ abstract class Firearm {
     }
 
     //Setter
+    public void setName(String name){
+        this.name = name;
+    }
     public void setOrigins(String country){
         this.origins = country;
     }
@@ -35,6 +41,9 @@ abstract class Firearm {
     }
     
     //getter
+    public String getName(){
+        return this.name;
+    }
     public String getOrigins(){
         return this.origins;
     }
@@ -54,9 +63,19 @@ abstract class Firearm {
         System.out.println("Gun reloaded with " + capacity + " rounds of " + calibre);
     }
     public void inspect(){
-        System.out.println("Origins: " + getOrigins() + "\nCapacity: " + getCapacity() + "\nCalibre: " + getCalibre() + "\nFirerate: " + getFirerate());
+        System.out.println("Name: " + getName() + "\nOrigins: " + getOrigins() + "\nCapacity: " + getCapacity() + "\nCalibre: " + getCalibre() + "\nFirerate: " + getFirerate() + " RPM");
     }
 
 }
 
 
+class AutoRifle extends Firearm{
+    //Constructor
+    public AutoRifle(String name, String origins, int capacity, String calibre, int firerate){
+        super(name, origins, capacity, calibre, firerate);
+    }
+    @Override
+    void shoot(){
+        System.out.println(getName() + " shoots continuously with firerate of " + getFirerate() + " RPM");
+    }
+}
