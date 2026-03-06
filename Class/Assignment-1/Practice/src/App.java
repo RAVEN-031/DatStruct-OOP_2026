@@ -49,5 +49,14 @@ abstract class Firearm {
     }
 
     //Methods
-    
+    abstract void shoot();
+    public void reload(){
+        System.out.println("Gun reloaded with " + capacity + " rounds of " + calibre);
+    }
+    public void inspect(){
+        System.out.println("Origins: " + getOrigins() + "\nCapacity: " + getCapacity() + "\nCalibre: " + getCalibre() + "\nFirerate: " + getFirerate());
+    }
+
 }
+
+
