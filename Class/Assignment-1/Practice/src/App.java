@@ -1,6 +1,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
         AutoRifle M4A1 = new AutoRifle("M4A1", "United States", 30, "5.56x45mm", 700);
+        AutoRifle HK416 = new AutoRifle("HK416", "Germany", 30, "5.56x45mm", 850);
+        Pistol USP45 = new Pistol("USP45", "Germany", 12, ".45 ACP", 600);
+        PumpActionShotgun M500 = new PumpActionShotgun("Mossberg 500", "United States", 8, "12 Gauge Shells", 1);
         
     }
 }
