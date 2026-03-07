@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         AutoRifle M4A1 = new AutoRifle("M4A1", "United States", 30, "5.56x45mm", 700);
-        M4A1.inspect();
+        
     }
 }
 
@@ -77,5 +77,27 @@ class AutoRifle extends Firearm{
     @Override
     void shoot(){
         System.out.println(getName() + " shoots continuously with firerate of " + getFirerate() + " RPM");
+    }
+}
+
+class Pistol extends Firearm{
+
+    //Constructor
+    public Pistol(String name, String origins, int capacity, String calibre, int firerate){
+        super(name, origins, capacity, calibre, firerate);
+    }
+    @Override
+    void shoot(){
+        System.out.println(getName() + " shoots one round per trigger pull");
+    }
+}
+
+class PumpActionShotgun extends Firearm{
+    public PumpActionShotgun(String name, String origins, int capacity, String calibre, int firerate){
+        super(name, origins, capacity, calibre, firerate);
+    }
+    @Override
+    void shoot(){
+        System.out.println(getName() + "shoots one shell then gets pumped");
     }
 }
