@@ -1,10 +1,28 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        AutoRifle M4A1 = new AutoRifle("M4A1", "United States", 30, "5.56x45mm", 700);
-        AutoRifle HK416 = new AutoRifle("HK416", "Germany", 30, "5.56x45mm", 850);
-        Pistol USP45 = new Pistol("USP45", "Germany", 12, ".45 ACP", 600);
-        PumpActionShotgun M500 = new PumpActionShotgun("Mossberg 500", "United States", 8, "12 Gauge Shells", 1);
+        //Object instantiation
+        Firearm rifle1 = new AutoRifle("M4A1", "United States", 30, "5.56x45mm", 700);
+        Firearm rifle2 = new AutoRifle("HK416", "Germany", 30, "5.56x45mm", 850);
+        Firearm pistol1 = new Pistol("USP45", "Germany", 12, ".45 ACP", 600);
+        Firearm shotgun1 = new PumpActionShotgun("Mossberg 500", "United States", 8, "12 Gauge Shells", 1);
         
+        //Not gonna deal with normal program that handles input output, this will only test the OOP
+        System.out.println("Calling methods for object rifle1");
+        rifle1.inspect();
+        rifle1.shoot();
+        rifle1.reload();
+        System.out.println("\nCalling methods for object rifle2");
+        rifle2.inspect();
+        rifle2.shoot();
+        rifle2.reload();
+        System.out.println("\nCalling methods for object pistol1");
+        pistol1.inspect();
+        pistol1.shoot();
+        pistol1.reload();
+        System.out.println("\nCalling methods for object shotgun1");
+        shotgun1.inspect();
+        shotgun1.shoot();
+        shotgun1.reload();
     }
 }
 
@@ -101,6 +119,6 @@ class PumpActionShotgun extends Firearm{
     }
     @Override
     void shoot(){
-        System.out.println(getName() + "shoots one shell then gets pumped");
+        System.out.println(getName() + " shoots one shell then gets pumped");
     }
 }
