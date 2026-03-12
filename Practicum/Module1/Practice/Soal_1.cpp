@@ -230,9 +230,6 @@ int main(){
         if (input == 5) skillSimulation(pCharacterList);
         if (input == 6) break;
     }
-    
-    
-    
-
+        
     return 0;
 }
