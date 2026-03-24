@@ -1,6 +1,17 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        //Finally, time to work
+        Espresso order1 = new Americano(3, "Robusta", false, true);
+        Espresso order2 = new Cappuccino(4, "Arabica", false, false, "Oat");
+
+        System.out.println("Order 1");
+        order1.showComposition();
+        order1.brewCoffee();
+        order1.printPrice();
+        System.out.println("Order 2");
+        order2.showComposition();
+        order2.brewCoffee();
+        order2.printPrice();
     }
 }
 
@@ -27,7 +38,7 @@ abstract class Espresso {
     public boolean getIce() {return ice;}
     //googlesearch:Methods on how to get invited into the epstein island
     public void printPrice() {System.out.println("Price: " + getPrice());}
-    public void brewCoffee() {System.out.println("Brewing " + getName());}
+    public void brewCoffee() {System.out.println("Brewing " + getName() + " Ice: " + getIce() + " Bean: " + getBean() + " Decaf: " + getDecaf());}
     abstract void showComposition();
 }
 
