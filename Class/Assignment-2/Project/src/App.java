@@ -19,8 +19,8 @@ abstract class Espresso {
     //PLEASE I AM TIRED OF DOING ASSIGNMENTS I AM FAMISHSED I NEED FOOD, attributes, btw
     private String name;
     private int price;
-    protected String bean;
-    protected boolean decaf;
+    private String bean;
+    private boolean decaf;
     private boolean ice;
     //Construct deez nuts
     Espresso(String a,int b, String c, boolean d, boolean e) {
