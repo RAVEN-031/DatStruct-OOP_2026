@@ -6,7 +6,7 @@ Saya membuat prototype program untuk menu kopi dari suatu cafe yang memungkinkan
 
 ## Class Diagram
 
-[Placeholder](./assets/diagram.png)
+![Placeholder](./assets/diagram.png)
 
 ## Code
 
@@ -88,7 +88,7 @@ class Cappuccino extends Espresso {
 
 ## Output
 
-[Placeholder](./assets/output.png)
+![Placeholder](./assets/output.png)
 
 ## Konsep OOP
 1.  Abstraction
